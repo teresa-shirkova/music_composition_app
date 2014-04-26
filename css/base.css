@@ -1,0 +1,29 @@
+
+
+div#container {
+width: 1400px;
+margin: 0 auto;
+}
+
+div.top {
+width: 1400px; 
+height: 300px;
+margin: 0 auto;
+}
+.stave {
+width: 1200px;
+margin: 0 auto;
+}
+
+div.bottom {
+width: 1800px;
+margin: 0 auto;
+}
+
+div.mode {
+float: left;
+display: inline;
+border: black 4px solid;
+width: 500px;
+height: 500px;
+}
