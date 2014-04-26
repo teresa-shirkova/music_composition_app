@@ -2,101 +2,55 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="css/base.css"></script>
-<link type="text/css" rel="stylesheet" href="css/mode_carousel.css"></script>
 <script src="js/vexflow/build/vexflow/vexflow-min.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-<script type="text/javascript" src="js/jcarousel.mode_carousel.js"></script>
-<script type="text/javascript" src="js/stave_notes.js"></script>
+<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
 </head>
 <body>
-<div id="container">
 <div class="top">
      <div class="stave" example="a">
         <canvas  class="canvas" width=1200 height=120></canvas>
      </div>
-  <script>
-  var canvas = $("div.top div.stave canvas")[0];
-  var renderer = new Vex.Flow.Renderer(canvas,
-    Vex.Flow.Renderer.Backends.CANVAS);
-
-  var ctx = renderer.getContext();
-  var stave = new Vex.Flow.Stave(10, 0, 1000);
-  stave.addClef("treble").setContext(ctx).draw();
-        </script>
-
 </div>
+
 <div class="bottom">
+ <div class="wrapper">
+            <h1>App Mode</h1>
+                <div id="write_play_carousel">
+<img src="media/img/write_play/write.svg" width="600" height="400" alt="">
+<img src="media/img/write_play/play.svg" width="600" height="400" alt="">
+<img src="media/img/write_play/eraser.svg" width="600" height="400" alt="">
 
-<div class="mode">
-&nbsp;
- <div class="mode_wrapper write_play">
-            <h1>Write or Playback</h1>
-            <div class="jcarousel-wrapper">
-                <div class="jcarousel">
-                    <ul>
-                        <li><img src="media/img/write_play/write.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/write_play/play.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/write_play/eraser.svg" width="300" height="300" alt=""></li>
-                    </ul>
-                </div>
-                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-            </div>
-        </div>
 
 </div>
-<div class="space">
-&nbsp;
+</div>
+
+ <div class="wrapper">
+            <h1>Note Length</h1>
+                <div id="note_length_carousel">
+<img src="media/img/note_type/quarter_note.svg" width="600" height="400" alt="">
+<img src="media/img/note_type/eighth_note.svg" width="600" height="400" alt="">
+<img src="media/img/note_type/half_note.svg" width="600" height="400" alt="">
+<img src="media/img/note_type/whole_note.svg" width="600" height="400" alt="">
 
 </div>
-<div class="mode">
-&nbsp;
- <div class="mode_wrapper note_type">
-            <h1>Select Time Signature</h1>
-            <div class="jcarousel-wrapper">
-                <div class="jcarousel">
-                    <ul>
-                        <li><img src="media/img/note_type/quarter_note.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/note_type/eighth_note.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/note_type/half_note.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/note_type/whole_note.svg" width="300" height="300" alt=""></li>
-                    </ul>
+</div>
+
+ <div class="wrapper">
+            <h1>Note Name</h1>
+                <div id="note_name_carousel">
+                        <img src="media/img/note_name/a_note.svg" width="600" height="400" alt="">
+                        <img src="media/img/note_name/b_note.svg" width="600" height="400" alt="">
+                        <img src="media/img/note_name/c_note.svg" width="600" height="400" alt="">
+                        <img src="media/img/note_name/d_note.svg" width="600" height="400" alt="">
+                        <img src="media/img/note_name/e_note.svg" width="600" height="400" alt="">
+                        <img src="media/img/note_name/f_note.svg" width="600" height="400" alt="">
+                        <img src="media/img/note_name/g_note.svg" width="600" height="400" alt="">
                 </div>
 
-                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-            </div>
-        </div>
-</div>
-<div class="space">
-&nbsp;
-
-</div>
-<div class="mode">
-&nbsp;
- <div class="mode_wrapper note_name">
-            <h1>Select Notes</h1>
-            <div class="jcarousel-wrapper">
-                <div class="jcarousel">
-                    <ul>
-                        <li><img src="media/img/note_name/a_note.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/note_name/b_note.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/note_name/c_note.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/note_name/d_note.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/note_name/e_note.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/note_name/f_note.svg" width="300" height="300" alt=""></li>
-                        <li><img src="media/img/note_name/g_note.svg" width="300" height="300" alt=""></li>
-                    </ul>
-                </div>
-                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-            </div>
-        </div>
-
+ </div>
 </div>
 
-</div>
-</div>
 </body>
 </html>
