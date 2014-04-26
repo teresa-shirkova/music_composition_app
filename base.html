@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link type="text/css" rel="stylesheet" href="css/base.css"></script>
+<link type="text/css" rel="stylesheet" href="css/mode_carousel.css"></script>
 <script src="js/vexflow/build/vexflow/vexflow-min.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/stave_notes.js"></script>
 <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-<link type="text/css" rel="stylesheet" href="css/base.css"></script>
+<script type="text/javascript" src="js/jcarousel.mode_carousel.js"></script>
+<script type="text/javascript" src="js/stave_notes.js"></script>
 </head>
 <body>
 <div id="container">
@@ -28,91 +30,67 @@
 
 <div class="mode">
 &nbsp;
- <div class="write_play">
-            <h1>Basic carousel</h1>
-
-            <p>This example shows how to setup a basic carousel with prev/next controls and pagination.</p>
-
+ <div class="mode_wrapper write_play">
+            <h1>Write or Playback</h1>
             <div class="jcarousel-wrapper">
                 <div class="jcarousel">
                     <ul>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="media/img/write_play/write.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/write_play/play.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/write_play/eraser.svg" width="300" height="300" alt=""></li>
                     </ul>
                 </div>
-
-                <p class="photo-credits">
-                    Photos by <a href="http://www.mw-fotografie.de">Marc Wiegelmann</a>
-                </p>
-
                 <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                 <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                
-                <p class="jcarousel-pagination">
-                    
-                </p>
             </div>
         </div>
 
 </div>
-<div class="mode">
+<div class="space">
 &nbsp;
- <div class="time_sig">
-            <h1>Basic carousel</h1>
-            <div class="jcarousel-wrapper">
-                <div class="jcarousel">
-                    <ul>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                    </ul>
-                </div>
 
-                <p class="photo-credits">
-                    Photos by <a href="http://www.mw-fotografie.de">Marc Wiegelmann</a>
-                </p>
-
-                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                
-                <p class="jcarousel-pagination">
-                    
-                </p>
-            </div>
-        </div>
 </div>
 <div class="mode">
 &nbsp;
- <div class="notes">
-            <h1>Basic carousel</h1>
-
-            <p>This example shows how to setup a basic carousel with prev/next controls and pagination.</p>
-
+ <div class="mode_wrapper note_type">
+            <h1>Select Time Signature</h1>
             <div class="jcarousel-wrapper">
                 <div class="jcarousel">
                     <ul>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
-                        <li><img src="/media/img/img1.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="media/img/note_type/quarter_note.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/note_type/eighth_note.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/note_type/half_note.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/note_type/whole_note.svg" width="300" height="300" alt=""></li>
                     </ul>
                 </div>
 
-                <p class="photo-credits">
-                    Photos by <a href="http://www.mw-fotografie.de">Marc Wiegelmann</a>
-                </p>
-
                 <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                 <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                
-                <p class="jcarousel-pagination">
-                    
-                </p>
+            </div>
+        </div>
+</div>
+<div class="space">
+&nbsp;
+
+</div>
+<div class="mode">
+&nbsp;
+ <div class="mode_wrapper note_name">
+            <h1>Select Notes</h1>
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li><img src="media/img/note_name/a_note.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/note_name/b_note.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/note_name/c_note.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/note_name/d_note.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/note_name/e_note.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/note_name/f_note.svg" width="300" height="300" alt=""></li>
+                        <li><img src="media/img/note_name/g_note.svg" width="300" height="300" alt=""></li>
+                    </ul>
+                </div>
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
             </div>
         </div>
 
