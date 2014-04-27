@@ -2,9 +2,10 @@
 function harnessCarousel(callback){
 
 	// Create the carousels
-	$('#write_play_carousel').carouFredSel({auto:true}).addClass('active_carousel');
-	$('#note_length_carousel').carouFredSel({auto:true}).trigger('pause', true);
-	$('#note_name_carousel').carouFredSel({auto:true}).trigger('pause', true);
+	var options = {auto:400};  // The auto number is the interval between carousel slides.
+	$('#write_play_carousel').carouFredSel(options).addClass('active_carousel');
+	$('#note_length_carousel').carouFredSel(options).trigger('pause', true);
+	$('#note_name_carousel').carouFredSel(options).trigger('pause', true);
 
 	// Get a handle on the state once rather than use callbacks.
 	var write_play_carousel;  $('#write_play_carousel').trigger('query', function(crsl){write_play_carousel=crsl;});
