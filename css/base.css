@@ -2,9 +2,12 @@
     float: left;
 }
 .caroufredsel_wrapper {
-    max-height: 20px;
+    max-height: 28px;
 }
 img {
     height: 20px;
+}
+div.active_carousel {
+    background-color: #F5F6CE;
 }
 

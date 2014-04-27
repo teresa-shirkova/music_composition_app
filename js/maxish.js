@@ -2,7 +2,7 @@
 function harnessCarousel(callback){
 
 	// Create the carousels
-	$('#write_play_carousel').carouFredSel({auto:true});
+	$('#write_play_carousel').carouFredSel({auto:true}).addClass('active_carousel');
 	$('#note_length_carousel').carouFredSel({auto:true}).trigger('pause', true);
 	$('#note_name_carousel').carouFredSel({auto:true}).trigger('pause', true);
 
@@ -14,17 +14,17 @@ function harnessCarousel(callback){
 	$(document).keydown(function(e){
 		if (e.keyCode == 32) {
 			if (!write_play_carousel.isPaused) {
-				$('#write_play_carousel').trigger('pause', true);
+				$('#write_play_carousel').trigger('pause', true).removeClass('active_carousel');
 				if (write_play_carousel.getCurrentPosition() == 0) {
-					$('#note_length_carousel').trigger('resume', true);
+					$('#note_length_carousel').trigger('resume', true).addClass('active_carousel');
 				} else {
 					getData();
 				}
 			} else if (!note_length_carousel.isPaused) {
-				$('#note_length_carousel').trigger('pause', true);
-				$('#note_name_carousel').trigger('resume', true);
+				$('#note_length_carousel').trigger('pause', true).removeClass('active_carousel');
+				$('#note_name_carousel').trigger('resume', true).addClass('active_carousel');
 			} else {
-				$('#note_name_carousel').trigger('pause', true);
+				$('#note_name_carousel').trigger('pause', true).removeClass('active_carousel');
 				getData();
 			}
 		}
@@ -41,7 +41,7 @@ function harnessCarousel(callback){
 					ans.push(i);
 					console.log('data:', ans);
 					callback(ans);
-					$('#write_play_carousel').trigger('resume', true);
+					$('#write_play_carousel').trigger('resume', true).addClass('active_carousel');
 				});
 			});
 		});
