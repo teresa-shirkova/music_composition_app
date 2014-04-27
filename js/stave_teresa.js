@@ -1,0 +1,83 @@
+var stave = new Vex.Flow.Stave(10, 0, 1000);
+
+var write_stave = function() {
+var canvas = $("div.top div.stave canvas")[0];
+var renderer = new Vex.Flow.Renderer(canvas,
+Vex.Flow.Renderer.Backends.CANVAS);
+
+var ctx = renderer.getContext();
+  stave.addClef("treble");
+  stave.addTimeSignature("4/4");
+stave.setContext(ctx).draw();
+
+};
+
+var write_notes = function() {
+var canvas = $("div.top div.stave canvas")[0];
+var renderer = new Vex.Flow.Renderer(canvas,
+Vex.Flow.Renderer.Backends.CANVAS);
+var ctx = renderer.getContext();
+var notes = [
+    new Vex.Flow.StaveNote({ keys: ["c/4"], duration: "q" }),
+
+    new Vex.Flow.StaveNote({ keys: ["d/4"], duration: "q" }),
+
+    new Vex.Flow.StaveNote({ keys: ["f/4"], duration: "q" }),
+
+    new Vex.Flow.StaveNote({ keys: ["e/4"], duration: "q" }),
+];
+
+ var voice = new Vex.Flow.Voice({
+    num_beats: 4,
+    beat_value: 4,
+    resolution: Vex.Flow.RESOLUTION
+  });
+ voice.addTickables(notes);
+
+var formatter = new Vex.Flow.Formatter().
+    joinVoices([voice]).format([voice], 200);
+
+ voice.draw(ctx, stave);
+};
+
+
+
+var write_s_note = function(entry) {
+var note_key = entry + "/4";
+console.log(note_key);
+var note = [
+    new Vex.Flow.StaveNote({ keys: [note_key], duration: "q" }),
+   ];
+return note;
+};
+
+var create_voices =  function(note) {
+var canvas = $("div.top div.stave canvas")[0];
+var renderer = new Vex.Flow.Renderer(canvas,
+Vex.Flow.Renderer.Backends.CANVAS);
+var ctx = renderer.getContext();
+
+var voice = new Vex.Flow.Voice({
+    num_beats: 1,
+    beat_value: 4,
+    resolution: Vex.Flow.RESOLUTION
+  });
+ voice.addTickables(note);
+
+var formatter = new Vex.Flow.Formatter().
+    joinVoices([voice]).format([voice], 200);
+
+ voice.draw(ctx, stave);
+
+};
+
+$(document).ready(function() {
+write_stave();
+create_voices(write_s_note("a"));
+create_voices(write_s_note("b"));
+create_voices(write_s_note("c"));
+create_voices(write_s_note("d"));
+create_voices(write_s_note("e"));
+});
+
+
