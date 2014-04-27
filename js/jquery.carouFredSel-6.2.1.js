@@ -518,6 +518,8 @@
 
 
 			$cfs.bind(cf_e('query', conf), function(e, callback){
+				crsl.getCurrentPosition = crsl.getCurrentPosition ||
+                                                          function(){return itms.first == 0?0:itms.total - itms.first};
 				callback(crsl);
 				//alert(['ve ask de kvestions', crsl.isStopped?1:0, crsl.isPaused?1:0]);
 				//console.log(arguments);

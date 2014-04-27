@@ -15,7 +15,11 @@ function harnessCarousel(callback){
 		if (e.keyCode == 32) {
 			if (!write_play_carousel.isPaused) {
 				$('#write_play_carousel').trigger('pause', true);
-				$('#note_length_carousel').trigger('resume', true);
+				if (write_play_carousel.getCurrentPosition() == 0) {
+					$('#note_length_carousel').trigger('resume', true);
+				} else {
+					getData();
+				}
 			} else if (!note_length_carousel.isPaused) {
 				$('#note_length_carousel').trigger('pause', true);
 				$('#note_name_carousel').trigger('resume', true);
@@ -35,6 +39,7 @@ function harnessCarousel(callback){
 				ans.push(i);
 				$('#note_name_carousel').trigger('currentPosition', function(i){
 					ans.push(i);
+					console.log('data:', ans);
 					callback(ans);
 					$('#write_play_carousel').trigger('resume', true);
 				});
