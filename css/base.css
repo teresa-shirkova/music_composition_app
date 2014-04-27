@@ -39,9 +39,15 @@ padding-bottom: 30pt;
 }
 
 .footer {
-bottom: 50px;
+position: absolute;
+bottom: 30px;
+width: 400px;
+left: 2.5%;
 }
 
+.footer a {
+color: blue;
+}
 
 
 
