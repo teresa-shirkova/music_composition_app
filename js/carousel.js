@@ -21,7 +21,10 @@ var write_stave = function() {
 
   var ctx = renderer.getContext();
   var stave = new Vex.Flow.Stave(10, 0, 1000);
-  stave.addClef("treble").setContext(ctx).draw();
+  stave.addClef("treble");
+  stave.addTimeSignature("4/4");
+stave.setContext(ctx).draw();
+
 };
 
 
