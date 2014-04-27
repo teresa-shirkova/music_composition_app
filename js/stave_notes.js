@@ -7,4 +7,5 @@ var make_stave = function () {
   var ctx = renderer.getContext();
   var stave = new Vex.Flow.Stave(10, 0, 500);
   stave.addClef("treble").setContext(ctx).draw();
+  stave.addTimeSignature("4/4");
 };
