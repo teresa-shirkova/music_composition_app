@@ -67,7 +67,6 @@ var formatter = new Vex.Flow.Formatter().
 $(document).ready(function() {
 write_stave();
 write_notes();
-write_s_note()
 });
 
 $(document).keydown(function(e){
