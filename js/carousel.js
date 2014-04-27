@@ -51,6 +51,23 @@ $(document).ready(function() {
 		$('#stave').html('`'
 		+ music.map(function(note){
 			return String.fromCharCode({
+				// 1
+				'a/1':0x6f,
+				'b/1':0x70,
+				'c/1':0x5b,
+				'd/1':0x5d,
+				'e/1':0x5c,
+				'f/1':0x61,
+				'g/1':0x73,
+				// 2
+				'a/2':0x63,
+				'b/2':0x87,
+				'c/2':0x62,
+				'd/2':0x6e,
+				'e/2':0x6d,
+				'f/2':0x2c,
+				'g/2':0x2e,
+				// 4
 				'a/4':0x29,
 				'b/4':0x5f,
 				'c/4':0x2b,
@@ -58,7 +75,15 @@ $(document).ready(function() {
 				'e/4':0x57,
 				'f/4':0x45,
 				'g/4':0x52,
-			}[note.substr(0,1) + '/4'] || 0x21);
+				// 8
+				'a/8':0x44,
+				'b/8':0x46,
+				'c/8':0x47,
+				'd/8':0x48,
+				'e/8':0x4a,
+				'f/8':0x4b,
+				'g/8':0x4c,
+			}[note] || 0x21);
 			}).join('')
 		+ String.fromCharCode(0x3d)
 		);
