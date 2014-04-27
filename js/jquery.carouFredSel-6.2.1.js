@@ -423,7 +423,6 @@
 
 			//	play event
 			$cfs.bind(cf_e('play', conf), function(e, dir, del, res) {
-console.log('told to play');
 				e.stopPropagation();
 				tmrs = sc_clearTimers(tmrs);
 
@@ -474,7 +473,6 @@ console.log('told to play');
 				//	set playing
 				crsl.isPaused = false;
 				tmrs.startTime = getTime();
-console.log('unpaused');
 
 				//	timeout the scrolling
 				var dur1 = opts.auto.timeoutDuration + del;
