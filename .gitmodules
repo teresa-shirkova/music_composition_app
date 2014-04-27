@@ -1,0 +1,3 @@
+[submodule "js/MIDI"]
+	path = js/MIDI
+	url = git@github.com:mudcube/MIDI.js.git
