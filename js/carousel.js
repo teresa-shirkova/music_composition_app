@@ -12,6 +12,7 @@ $(document).ready(function() {
 				break;
 			case 2:
 				delete_last_note();
+				draw_with_fonts();
 				break;
 		}
 		console.log(music);
