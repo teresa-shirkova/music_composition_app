@@ -15,7 +15,6 @@ var note_name_off = function() {
 
 
 $(document).ready(function() {
-<<<<<<< HEAD
 note_name_off();
 note_type_off();
 write_play_off();
