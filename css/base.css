@@ -1,4 +1,10 @@
 .wrapper {
     float: left;
 }
+.caroufredsel_wrapper {
+    max-height: 20px;
+}
+img {
+    height: 20px;
+}
 
