@@ -40,7 +40,7 @@ $(document).ready(function() {
 		// play the note
 		MIDI.setVolume(0, 127);
 		music.map(function(note){
-			var midiNote = {a:50,b:51,c:52,d:53,e:54,f:55,g:56,h:57}[note.substr(0,1)]||80; // If 80 I missed something
+			var midiNote = {a:81,b:83,c:84,d:86,e:88,f:89,g:91,h:93}[note.substr(0,1)]||80; // If 80 I missed something
 			var duration = barTime/Number(note.substr(2));
 			MIDI.noteOn(0, midiNote, velocity, delay);
 			MIDI.noteOff(0, midiNote, delay + duration);
