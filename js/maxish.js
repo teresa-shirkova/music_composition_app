@@ -11,7 +11,6 @@ function harnessCarousel(callback){
 	var note_length_carousel; $('#note_length_carousel').trigger('query', function(crsl){note_length_carousel=crsl;});
 	var note_name_carousel;   $('#note_name_carousel').trigger('query', function(crsl){note_name_carousel=crsl;});
 
-
 	$(document).keydown(function(e){
 		if (e.keyCode == 32) {
 			if (!write_play_carousel.isPaused) {
@@ -22,10 +21,26 @@ function harnessCarousel(callback){
 				$('#note_name_carousel').trigger('resume', true);
 			} else {
 				$('#note_name_carousel').trigger('pause', true);
-				$('#write_play_carousel').trigger('resume', true);
+				getData();
 			}
 		}
 	});
+
+	// Use callbacks for this:
+	function getData(){
+		ans = [];
+		$('#write_play_carousel').trigger('currentPosition', function(i){
+			ans.push(i);
+			$('#note_length_carousel').trigger('currentPosition', function(i){
+				ans.push(i);
+				$('#note_name_carousel').trigger('currentPosition', function(i){
+					ans.push(i);
+					callback(ans);
+					$('#write_play_carousel').trigger('resume', true);
+				});
+			});
+		});
+	}
 };
 
 
