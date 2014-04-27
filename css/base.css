@@ -11,3 +11,10 @@ div.active_carousel {
     background-color: #F5F6CE;
 }
 
+@font-face {font-family:Lassus;src:url(http://demteam.org/Lassus.woff);}
+
+span.music {
+    font-size: 40pt;
+    font-family: Lassus;
+}
+
