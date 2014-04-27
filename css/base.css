@@ -32,11 +32,11 @@ font-size: 30pt;
 text-align: center;
 }
 
-/*.top {
-text-align: center;
+.top {
+padding-left: 50pt;
 padding-top: 50pt;
 padding-bottom: 30pt;
-}*/
+}
 
 
 

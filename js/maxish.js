@@ -2,7 +2,7 @@
 function harnessCarousel(callback){
 
 	// Create the carousels
-	var options = {auto:400};  // The auto number is the interval between carousel slides.
+	var options = {auto:1000};  // The auto number is the interval between carousel slides.
 	$('#write_play_carousel').carouFredSel(options).addClass('active_carousel');
 	$('#note_length_carousel').carouFredSel(options).trigger('pause', true);
 	$('#note_name_carousel').carouFredSel(options).trigger('pause', true);
