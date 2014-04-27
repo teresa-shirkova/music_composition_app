@@ -423,6 +423,7 @@
 
 			//	play event
 			$cfs.bind(cf_e('play', conf), function(e, dir, del, res) {
+console.log('told to play');
 				e.stopPropagation();
 				tmrs = sc_clearTimers(tmrs);
 
@@ -473,6 +474,7 @@
 				//	set playing
 				crsl.isPaused = false;
 				tmrs.startTime = getTime();
+console.log('unpaused');
 
 				//	timeout the scrolling
 				var dur1 = opts.auto.timeoutDuration + del;
@@ -514,6 +516,13 @@
 				}
 
 				return true;
+			});
+
+
+			$cfs.bind(cf_e('query', conf), function(e, callback){
+				callback(crsl);
+				//alert(['ve ask de kvestions', crsl.isStopped?1:0, crsl.isPaused?1:0]);
+				//console.log(arguments);
 			});
 
 
