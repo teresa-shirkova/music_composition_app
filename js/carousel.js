@@ -12,10 +12,10 @@ var note_type_off = function() {
 
 var note_name_off = function() {
     $('#note_name_carousel').carouFredSel({auto:false}).trigger('pause', true);
-};
 
 
 $(document).ready(function() {
+<<<<<<< HEAD
 note_name_off();
 note_type_off();
 write_play_off();
