@@ -46,10 +46,25 @@ var canvas = $("div.top div.stave canvas")[0];
 var renderer = new Vex.Flow.Renderer(canvas,
 Vex.Flow.Renderer.Backends.CANVAS);
 var ctx = renderer.getContext();
+var note_key = entry + "/4";
+console.log(note_key);
+var note = [
+    new Vex.Flow.StaveNote({ keys: [note_key], duration: "q" }),
+   ];
+ var voice = new Vex.Flow.Voice({
+    num_beats: 1,
+    beat_value: 4,
+    resolution: Vex.Flow.RESOLUTION
+  });
+ voice.addTickables(note);
 
-var notes = [
-    new Vex.Flow.StaveNote({ keys: ["c/4"], duration: "q" }),
-];
+var formatter = new Vex.Flow.Formatter().
+    joinVoices([voice]).format([voice], 200);
+
+ voice.draw(ctx, stave);
+
+};
+/*
 
  var voice = new Vex.Flow.Voice({
     num_beats: 4,
@@ -63,10 +78,12 @@ var formatter = new Vex.Flow.Formatter().
 
  voice.draw(ctx, stave);
 };
+*/
 
 $(document).ready(function() {
 write_stave();
-write_notes();
+/*write_notes();*/
+write_s_note("a");
 });
 
 $(document).keydown(function(e){
